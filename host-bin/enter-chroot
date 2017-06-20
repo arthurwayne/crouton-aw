@@ -560,9 +560,9 @@ if [ ! -d "$varrundrm" -a -d "$sysclassdrm" -a -d "$devdri" ]; then
         fi
     done
     # Scanning of /dev/dri is done sequentially, so make sure there's a card0
-    for f in "$varrundri/card"; do
-        [ -e "$varrundri/card0" ] || mv -f "$f" "$varrundri/card0"
-    done
+    #for f in "$varrundri/card"; do
+    #   [ -e "$varrundri/card0" ] || mv -f "$f" "$varrundri/card0"
+    #done
     mount --bind "$varrundrm" "$sysclassdrm"
     mount --bind "$varrundri" "$devdri"
 fi
